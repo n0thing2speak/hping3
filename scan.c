@@ -330,12 +330,12 @@ static void sender(struct portinfo *pi)
 			if (!recvd)
 				sleep(1);
 			fprintf(stderr, "All replies received. Done.\n");
-			printf("Not responding ports: ");
-			for (i = 0; i < MAXPORT; i++) {
-				if (pi[i].active && !pi[i].retry)
-					printf("(%d %.11s) ", i, port_to_name(i));
-			}
-			printf("\n");
+			// printf("Not responding ports: ");
+			// for (i = 0; i < MAXPORT; i++) {
+			// 	if (pi[i].active && !pi[i].retry)
+			// 		printf("(%d %.11s) ", i, port_to_name(i));
+			// }
+			// printf("\n");
 			exit(0);
 		}
 		/* Are we sending too fast? */
